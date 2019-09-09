@@ -4,7 +4,7 @@
 
 ##### name game:
 
-> - [The First Game is Tic Tac toe.](<(https://simplegamewithangular.firebaseapp.com/#/ox)>)
+[The First Game is Tic Tac toe.](<(https://simplegamewithangular.firebaseapp.com/#/ox)>)
 
 ```
 npm install or yarn
