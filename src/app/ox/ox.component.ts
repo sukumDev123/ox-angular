@@ -39,13 +39,16 @@ export class OxComponent implements OnInit {
   onClickBox(ind, ind2) {
     const checkVAl = this.checkValFunc(ind, ind2);
     if (!checkVAl) {
-      this.color_click[ind][ind2] = "clicked";
       if (this.state == "o") {
         this.box_script[ind][ind2] = "o";
+        this.color_click[ind][ind2] = "clicked_o";
+
         this.state = "x";
         this.stateBefore = "o";
       } else {
         this.box_script[ind][ind2] = "x";
+        this.color_click[ind][ind2] = "clicked_x";
+
         this.state = "o";
         this.stateBefore = "x";
       }
@@ -59,8 +62,6 @@ export class OxComponent implements OnInit {
     const horisental = oxClass.checkHorizontalIsLike3boxs(this.stateBefore);
     const z = oxClass.checkZ();
     if (vertical === true || horisental === true || z === true) {
-      console.log(vertical, horisental, z);
-      console.log("done");
       this.showIs = true;
       if (this.stateBefore === "x") {
         this.scoreX += 1;
@@ -69,9 +70,9 @@ export class OxComponent implements OnInit {
       }
     }
     const ggg = this.color_click
-      .map(d => d.filter(d2 => d2 == "clicked").length)
+      .map(d => d.filter(d2 => d2 !== "none").length)
       .reduce((sum, val) => sum + val, 0);
-    // console.log({ggg})
+
     if (ggg === 9) {
       // console.log('dewss')
       this.dewsVal += 1;
