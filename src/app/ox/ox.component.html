@@ -1,0 +1,37 @@
+
+<div *ngIf="showIs" class="box-notification">
+  <div *ngIf="!stateDew" class="box-n_">
+    <h1>{{stateBefore}} is win</h1>
+    <button (click)="resetVal()">Restart Game</button>
+  </div>
+  <div  class="box-n_" *ngIf="stateDew" >
+    <h1>
+        {{stateDew}}
+
+    </h1>
+    <button (click)="resetVal()">Restart Game</button>
+  </div>
+
+</div>
+
+
+<h1>Ox components
+</h1>
+
+<div class="div-scores">
+  <h3>score x : {{ scoreX }}</h3>
+  <h3>score O : {{ scoreO }}</h3>
+  <h3> dewss : {{ dewsVal }} </h3>
+</div>
+
+<h3>turn is {{state}}</h3>
+
+<div class="box" *ngFor="let item of boxs;let ind = index">
+  <div *ngFor="let item2 of boxs;let ind2= index" class="box-side">
+    <div (click)="onClickBox(ind,ind2)"  class="box-side-in-side"> 
+     <h1 class="{{ color_click[ind][ind2] }}"> {{box_script[ind][ind2]}}</h1>
+    </div>
+  </div>
+ 
+  
+</div>
