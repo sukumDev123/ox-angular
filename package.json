@@ -1,14 +1,14 @@
 {
-  "name": "testox",
+  "name": "simple-game-angular",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "build": "ng build --prod",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "deploy:firebase": "mv firebase/public/* && dist/**/* firebase/public/ && firebase deploy --only hosting"
+    "deploy:firebase": "rm -rf firebase/public/* && cp -a ./dist/testox/* ./firebase/public/ && cd firebase && firebase deploy --only hosting && cd ../"
   },
   "private": true,
   "dependencies": {
