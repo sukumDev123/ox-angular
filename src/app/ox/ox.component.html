@@ -12,16 +12,16 @@
   </div>
 </div>
 
-<h1 class="text-center font-color">tic tac toe</h1>
+<h1 class="text-center font-color">
+  tic tac toe turn is
+  <strong style="background: rgb(139, 34, 34);padding: 20px;">{{
+    state
+  }}</strong>
+</h1>
 <div class="row font-color">
   <div class="div-scores">
-    <h3>score X : {{ scoreX }}</h3>
-    <h3>score O : {{ scoreO }}</h3>
-    <h3>The turn is not the winnder: {{ dewsVal }}</h3>
     <div class="turnDiv">
-      <h3>
-        turn is <strong>{{ state }}</strong>
-      </h3>
+      <h3></h3>
     </div>
   </div>
 
@@ -35,5 +35,10 @@
         </div>
       </div>
     </div>
+  </div>
+  <div class="scroreBar">
+    <h3>score X : {{ scoreX }}</h3>
+    <h3>score O : {{ scoreO }}</h3>
+    <h3>Not winner: {{ dewsVal }}</h3>
   </div>
 </div>

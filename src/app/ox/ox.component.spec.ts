@@ -1,6 +1,3 @@
-import { async, ComponentFixture, TestBed } from "@angular/core/testing";
-
-import { OxComponent } from "./ox.component";
 import { OxHowto } from "./ox.howt";
 
 describe("OxComponent", () => {

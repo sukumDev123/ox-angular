@@ -88,11 +88,3 @@ export class OxComponent implements OnInit {
     this.showIs = false;
   }
 }
-
-/**
- * 00,01,02  o o o
- * 10,11,12  o o o
- * 20,21,22 o o o
- *
- *
- */

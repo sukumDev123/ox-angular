@@ -6,7 +6,7 @@ export class OxHowto {
 
   checkHorizontalIsLike3boxs = (vec, sizeOfTic = 3) => {
     const checkCountOfValInput = (lists: String[]) =>
-      lists.filter(datas => datas === vec);
+      lists.filter(datas => datas === vec); // (x , x , ).leng
     const checkValExists3BoxsMore0Size =
       this.datas.filter(boxs => checkCountOfValInput(boxs).length === sizeOfTic)
         .length > 0;
@@ -14,12 +14,9 @@ export class OxHowto {
   };
 
   checkOxVertical() {
-    const size = this.datas.length; // 3 x = 0   (3 - 1) - x == 0
+    const size = this.datas.length;
     const boxs = this.datas;
     let gg = false;
-    // const gg2 = boxs.map((box, index) => box);
-    // console.log({ gg2 });
-
     for (let x = 0; x < size; x++) {
       let g0 = boxs[0][x];
       let g1 = boxs[1][x];
