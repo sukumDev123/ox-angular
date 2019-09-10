@@ -1,0 +1,13 @@
+<h1 style="text-align: center" class="font-color">Chess Game</h1>
+<div class="table">
+  <div *ngFor="let items of tables; let i = index" class="table-box">
+    <div class="table-rows" *ngFor="let item of items; let j = index">
+      <div class="table-columes {{ cssColorBoxs[i][j] }}">
+        <h1 (click)="getPositionChess($event)" class="font-color">{{ tables[i][j] }}</h1>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div *ngFor="let chess of chessPlayer1; let i = index"></div>
+<!-- class="{{ chessPlayerCss[] }}" -->

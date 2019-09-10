@@ -1,0 +1,20 @@
+.table-columes {
+  border: 1px solid white;
+  text-align: center;
+}
+.table {
+  width: 50%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+.color_normal {
+  background: white;
+}
+.color_Box {
+  background: rgb(17, 0, 255);
+  transition: all 0.3s ease-in;
+}
+.color_Box:hover {
+  background: rgb(11, 9, 51);
+}
